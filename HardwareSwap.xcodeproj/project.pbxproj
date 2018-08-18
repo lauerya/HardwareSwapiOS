@@ -74,6 +74,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		102135372128B63E00045A99 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				103D02922113EB8000A1ABA2 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		102135382128B65000045A99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				103D02C321151E8000A1ABA2 /* CardView.swift */,
+				103D02C52115270B00A1ABA2 /* CollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		102135392128B65700045A99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1021353A2128B67F00045A99 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				103D02902113EB8000A1ABA2 /* AppDelegate.swift */,
+				103D02942113EB8000A1ABA2 /* Main.storyboard */,
+				103D029C2113EB8300A1ABA2 /* LaunchScreen.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		103D02842113EB8000A1ABA2 = {
 			isa = PBXGroup;
 			children = (
@@ -95,15 +129,13 @@
 		103D028F2113EB8000A1ABA2 /* HardwareSwap */ = {
 			isa = PBXGroup;
 			children = (
-				103D02902113EB8000A1ABA2 /* AppDelegate.swift */,
-				103D02922113EB8000A1ABA2 /* ViewController.swift */,
-				103D02942113EB8000A1ABA2 /* Main.storyboard */,
-				103D02C52115270B00A1ABA2 /* CollectionViewCell.swift */,
+				1021353A2128B67F00045A99 /* Common */,
+				102135392128B65700045A99 /* Models */,
+				102135382128B65000045A99 /* Views */,
+				102135372128B63E00045A99 /* Controllers */,
 				103D029A2113EB8300A1ABA2 /* Assets.xcassets */,
-				103D029C2113EB8300A1ABA2 /* LaunchScreen.storyboard */,
 				103D029F2113EB8300A1ABA2 /* Info.plist */,
 				103D02972113EB8000A1ABA2 /* HardwareSwap.xcdatamodeld */,
-				103D02C321151E8000A1ABA2 /* CardView.swift */,
 			);
 			path = HardwareSwap;
 			sourceTree = "<group>";
