@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1021353C2128B9D000045A99 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021353B2128B9D000045A99 /* Post.swift */; };
+		1021353E2128C05400045A99 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021353D2128C05400045A99 /* ApiManager.swift */; };
+		102135402128C5EC00045A99 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021353F2128C5EC00045A99 /* SwiftyJSON.swift */; };
 		103D02912113EB8000A1ABA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D02902113EB8000A1ABA2 /* AppDelegate.swift */; };
 		103D02932113EB8000A1ABA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D02922113EB8000A1ABA2 /* ViewController.swift */; };
 		103D02962113EB8000A1ABA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103D02942113EB8000A1ABA2 /* Main.storyboard */; };
@@ -15,6 +18,7 @@
 		103D029E2113EB8300A1ABA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103D029C2113EB8300A1ABA2 /* LaunchScreen.storyboard */; };
 		103D02C421151E8000A1ABA2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D02C321151E8000A1ABA2 /* CardView.swift */; };
 		103D02C62115270B00A1ABA2 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D02C52115270B00A1ABA2 /* CollectionViewCell.swift */; };
+		10D8BD63212909C90023B462 /* ImgurManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D8BD62212909C90023B462 /* ImgurManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1021353B2128B9D000045A99 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		1021353D2128C05400045A99 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		1021353F2128C5EC00045A99 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../../../Desktop/SwiftyJSON-master/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
 		103D028D2113EB8000A1ABA2 /* HardwareSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HardwareSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		103D02902113EB8000A1ABA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		103D02922113EB8000A1ABA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,7 @@
 		103D02AF2113EB8300A1ABA2 /* HardwareSwapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HardwareSwapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		103D02C321151E8000A1ABA2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		103D02C52115270B00A1ABA2 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		10D8BD62212909C90023B462 /* ImgurManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		102135392128B65700045A99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1021353B2128B9D000045A99 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,9 +110,12 @@
 		1021353A2128B67F00045A99 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1021353F2128C5EC00045A99 /* SwiftyJSON.swift */,
 				103D02902113EB8000A1ABA2 /* AppDelegate.swift */,
 				103D02942113EB8000A1ABA2 /* Main.storyboard */,
 				103D029C2113EB8300A1ABA2 /* LaunchScreen.storyboard */,
+				1021353D2128C05400045A99 /* ApiManager.swift */,
+				10D8BD62212909C90023B462 /* ImgurManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -274,8 +286,12 @@
 				103D02C62115270B00A1ABA2 /* CollectionViewCell.swift in Sources */,
 				103D02932113EB8000A1ABA2 /* ViewController.swift in Sources */,
 				103D02992113EB8000A1ABA2 /* HardwareSwap.xcdatamodeld in Sources */,
+				102135402128C5EC00045A99 /* SwiftyJSON.swift in Sources */,
+				1021353E2128C05400045A99 /* ApiManager.swift in Sources */,
+				1021353C2128B9D000045A99 /* Post.swift in Sources */,
 				103D02C421151E8000A1ABA2 /* CardView.swift in Sources */,
 				103D02912113EB8000A1ABA2 /* AppDelegate.swift in Sources */,
+				10D8BD63212909C90023B462 /* ImgurManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

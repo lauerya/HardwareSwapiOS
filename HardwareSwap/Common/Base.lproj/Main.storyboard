@@ -40,6 +40,7 @@
                                             <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                         </state>
                                         <connections>
+                                            <action selector="onSearchClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CEO-mb-CLm"/>
                                             <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgU-96-mnR"/>
                                         </connections>
                                     </button>
@@ -52,20 +53,20 @@
                                     <constraint firstAttribute="height" constant="542" id="3rJ-EV-WKI"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G6C-Ek-DeZ">
-                                    <size key="itemSize" width="349" height="250"/>
+                                    <size key="itemSize" width="349" height="276"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cell" id="KkL-E2-Mc3" customClass="CollectionViewCell" customModule="HardwareSwap" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="10" width="349" height="250"/>
+                                        <rect key="frame" x="13" y="10" width="349" height="276"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="349" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="349" height="276"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1080" translatesAutoresizingMaskIntoConstraints="NO" id="KcN-jO-uDS">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KcN-jO-uDS">
                                                     <rect key="frame" x="0.0" y="0.0" width="349" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,11 +86,31 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kU3-Et-WeD">
+                                                    <rect key="frame" x="244" y="237" width="100" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="Go To Post">
+                                                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="onGoToPostClick:" destination="KkL-E2-Mc3" eventType="touchUpInside" id="muB-hh-GIQ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yb7-vZ-IAs">
+                                                    <rect key="frame" x="6" y="237" width="111" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Message User"/>
+                                                    <connections>
+                                                        <action selector="messageUserClick:" destination="KkL-E2-Mc3" eventType="touchUpInside" id="QMO-m4-Rdo"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="body" destination="qIl-et-OHP" id="NN3-NL-j2u"/>
+                                            <outlet property="goToPostButton" destination="kU3-Et-WeD" id="gNq-vZ-Sv2"/>
                                             <outlet property="timestamp" destination="KcN-jO-uDS" id="YXX-j0-1bz"/>
                                             <outlet property="titleName" destination="b3H-SZ-Ydw" id="LCU-mm-d8t"/>
                                         </connections>
@@ -100,14 +121,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="d3x-Z3-uri"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ki6-cI-maF">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jG3-XL-C6n" secondAttribute="trailing" id="0xh-bQ-KVN"/>
                             <constraint firstItem="gls-Nq-Xmb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6HV-sv-xtF"/>
+                            <constraint firstItem="ki6-cI-maF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="6QO-bO-OLn"/>
                             <constraint firstItem="jG3-XL-C6n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9DY-r9-L9K"/>
                             <constraint firstItem="gls-Nq-Xmb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RPJ-Vd-h2m"/>
                             <constraint firstItem="jG3-XL-C6n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="T4H-Pf-GAB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ki6-cI-maF" secondAttribute="trailing" constant="169" id="ThH-LC-p9d"/>
+                            <constraint firstItem="ki6-cI-maF" firstAttribute="top" secondItem="jG3-XL-C6n" secondAttribute="bottom" constant="214.5" id="okY-El-Njc"/>
                             <constraint firstItem="gls-Nq-Xmb" firstAttribute="top" secondItem="jG3-XL-C6n" secondAttribute="bottom" constant="24.5" id="zfi-wj-88R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -116,6 +144,7 @@
                         <outlet property="collectionView" destination="gls-Nq-Xmb" id="sOG-k8-3IG"/>
                         <outlet property="searchLabel" destination="0aR-Lc-6T6" id="1Yp-kb-5TV"/>
                         <outlet property="searchTextField" destination="ft0-iI-ypF" id="sxe-I8-LEp"/>
+                        <outlet property="statusIndicator" destination="ki6-cI-maF" id="ou0-lE-n3c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -123,7 +152,4 @@
             <point key="canvasLocation" x="-103.2" y="116.49175412293854"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="1080" width="1300" height="975"/>
-    </resources>
 </document>
